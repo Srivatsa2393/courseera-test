@@ -1,0 +1,25 @@
+<table class="table" ng-show="foundItemCtrl.foundItem.length">  0" ng-cloak>
+  <thread>
+    <tr>
+      <th>Short name</th>
+			<th>Name</th>
+			<th>Description</th>
+    </tr>
+  </thread>
+  <tbody>
+		<tr ng-repeat="(index, item) in foundItemCtrl.foundItem">
+			<td ng-bind="item.short_name"></td>
+			<td ng-bind="item.name"></td>
+			<td ng-bind="item.description"></td>
+			<td>
+				<button ng-click="foundItemCtrl.onRemove({index: index})" class="btn btn-danger btn-sm">
+					Don't want this one!
+				</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<div ng-show="foundItemCtrl.foundItem.length == 0" class="alert alert-danger" role="alert">
+	<span class="glyphicon glyphicon-exclamation-sign"></span>
+	Nothing found
+</div>
