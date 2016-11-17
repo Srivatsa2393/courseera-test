@@ -23,6 +23,11 @@
         narrowItDown.removeItem = function(index) {
             narrowItDown.found.splice(index, 1);
         }
+
+        // narrowItDown.clear = function() {
+        //     narrowItDown.searchTerm = "";
+        //     delete narrowItDown.found;
+        // }
     }
 
     MenuSearchService.$inject = ['$http', '$q', 'ApiBasePath'];
